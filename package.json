@@ -11,8 +11,8 @@
   "scripts": {
     "build": "npm install --prefix client --include=dev --no-audit --no-fund && npm run build --prefix client",
     "vercel-build": "npm run build",
-    "dev:client": "npm --prefix client run dev",
-    "dev:server": "npm --prefix server run dev",
+    "dev:client": "node api.js && npm --prefix client run dev",
+    "dev:server": "node api.js && npm --prefix server run dev",
     "seed": "npm --prefix server run seed",
     "check:db": "npm --prefix server run check:db",
     "install:all": "npm install && npm install --prefix client && npm install --prefix server"
